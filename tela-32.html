@@ -1,0 +1,73 @@
+<div style="height: 72px; width: 100%; background-color: #004c72; ">
+    <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;"><img
+            style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;"
+            src="recursos/imgs/SI_H1.png"><img style="height: 73.05px; width:108.45px; margin-left:170.85px;"
+            src="recursos/imgs/SI_H2.png"><img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
+            src="recursos/imgs/SI_H3.png">
+    </div>
+</div>
+<div class="coluna-esquerda largura-1_1" style="width: 100%;">
+    <div style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+        <img src="recursos/imgs/SI_32.png" style="margin-left: 10px;width: 300px;">
+        <div
+            style="margin-top: 96px;margin-left: 40px;width: 330px;height: 125px;color: white; border: 1px solid #fac900;border-radius: 10px;padding: 10px;">
+            <p>
+                Tosse persistente seca ou produtiva, febre vespertina, sudorese noturna e emagrecimento são sintomas
+                clássicos
+                observados por esse diagnóstico.
+            </p>
+
+            <div style="display: flex; flex-direction: column;">
+                <div id="opcao_1" style="display: inline-flex; cursor: pointer;">
+                    <p>( </p>
+                    <p id="marcado_1">X</p>
+                    <p>) </p>
+                    <p style="padding-left: 3px;"> Diagnóstico clínico</p>
+                </div>
+
+                <div id="opcao_2" style="display: inline-flex; margin-top: -12px; cursor: pointer;">
+                    <p>(</p>
+                    <p id="marcado_2">X</p>
+                    <p>)</p>
+                    <p style="padding-left: 3px;"> Diagnóstico por imagem</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="sub" src="recursos/imgs/submeter.png"
+        style="position: absolute; left: 605px; top: 338px; width: 130px; cursor: pointer;">
+    <img id="termometro" src="recursos/imgs/termometro1.png"
+        style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
+</div>
+<footer style="height: 39.05px; width: 100%; background-color: #004c72;">
+    <img style="height: 29px;margin: 6.5px 37.05px;" src="recursos/imgs/SI_F1.png">
+    <img style="height: 27px;margin: 8.5px 37.05px;position: absolute;right: 0px;" src="recursos/imgs/SI_F2.png">
+</footer>
+
+<script>
+    $(() => {
+        let selecionado = 0;
+        var submeter = $('#sub').hide();
+
+        $(submeter).on(() => {
+            if (selecionado) {
+
+            }
+        })
+
+        desmarcarOpcoes();
+        $(document).find('[id^=opcao]').map((index, opcao) => {
+            $(opcao).click(() => {
+                desmarcarOpcoes();
+                $(`#marcado_${(index + 1)}`).show();
+                selecionado = (index + 1);
+                $(submeter).fadeIn();
+            })
+        })
+
+        function desmarcarOpcoes() {
+            $(document).find('[id^=marcado]').hide();
+        }
+    })
+
+</script>
