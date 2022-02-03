@@ -10,12 +10,77 @@
         corretamente todas as peças do quebra-cabeça e aproveite para entender mais sobre o isolamento de pessoas
         com
         tuberculose no sistema prisional.</p>
-    <img src="recursos/imgs/SI_51.png" style="margin-left: 260px;margin-top: 10px;width: 420px;"
-        class="btn animate__animated animate__backInRight" id="botao_1">
+    <img src="recursos/imgs/SI_51.png" style="margin-left: 20px;margin-top: 10px;width: 420px;"
+        class="btn animate__animated animate__backInRight">
+
+    <div>
+        <div id="drop_1"
+            style="position: absolute; background-color: red; width: 210px; height: 140px; top: 144px; left: 20px;">
+        </div>
+    </div>
+
+    <div>
+        <div id="drop_2"
+            style="position: absolute; background-color: red; width: 210px; height: 140px; top: 144px; left: 230px;">
+        </div>
+    </div>
+
+
+
+    <div id="container_1" draggable="true" style="position: absolute; left: 480px; top: 150px;">
+        <img id="drag_1" src="recursos/imgs/peca1.png" style="width: 210px;">
+    </div>
+    <div id="container_2" draggable="true" style="position: absolute; left: 480px; top: 270px;">
+        <img id="drag_2" src="recursos/imgs/peca2.png" style="width: 210px;">
+    </div>
+    <div id="container_3" draggable="true" style="position: absolute; left: 670px; top: 150px;">
+        <img id="drag_3" src="recursos/imgs/peca3.png" style="width: 210px;">
+    </div>
+
+
 </div>
 <footer style="height: 39.05px; width: 100%; background-color: #004c72;">
     <img style="height: 29px;margin: 6.5px 37.05px;" src="recursos/imgs/SI_F1.png">
     <img style="height: 27px;margin: 8.5px 37.05px;position: absolute;right: 0px;" src="recursos/imgs/SI_F2.png">
 </footer>
-</div>
-</div>
+
+<script>
+
+    var dragged;
+    var posicaoInicialDrag = [];
+    $(document).find('[id^=container]').map((index, objeto) => {
+        posicaoInicialDrag[index] = $(objeto).position()
+    });
+
+
+    document.addEventListener('dragstart', startDrag);
+    document.addEventListener('dragleave', stopDrag);
+
+    function startDrag(event) {
+        console.log(event);
+        dragged = event.target;
+    }
+
+    function stopDrag(event) {
+        //event.preventDefault();
+        //console.log($('#'+event.target.id).offset());
+        console.log($('#' + event.target.id).position());
+        console.log($('#' + event.target.id));
+
+        //console.log(dragged);
+        //console.log(event.target.id.indexOf('drop'));
+        
+        console.log(event.target.id);
+
+
+        if (event.target.id.indexOf('drop') != -1) {
+            //event.target.appendChild(dragged);
+            console.log('sim');
+        } else {
+            console.log('nao');
+            $($('#' + event.target.id)).animate(posicaoInicialDrag[0], 100);
+            
+        }
+        $('#' + dragged.id).animate($('#' + event.target.id).position(), 100);
+    }
+</script>
