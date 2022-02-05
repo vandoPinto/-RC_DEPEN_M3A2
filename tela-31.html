@@ -107,12 +107,18 @@
             style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
             <div
                 style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
-                <p style="margin-top: 62px; margin-left: 45px; width: 260px;">
-                    <strong>Parabéns!</strong> Você acertou as quatro situações.
+                <p id="parabens" style="margin-top: 62px; margin-left: 45px; width: 260px; display: none;">
+                    <strong>Parabéns!</strong> Você acertou as três situações.
                 </p>
-                <p style="margin-top: 62px; margin-left: 45px; width: 260px;">
-                    Tente novamente e acerte as quatro alternativas para o personagem chegar à unidade de saúde!
-                </p>
+                <div id="tenteNovamente">
+                    <p style="margin-top: 49px;margin-left: 45px;margin-bottom: 27px;width: 260px;">
+                        Tente novamente e acerte as três alternativas para o personagem chegar à unidade de saúde!
+                    </p>
+                    <div id="btnTenteNovamente"
+                        style="background-color:#fac900;width: 112px;height: 30px;border-radius: 5px;display: flex;justify-content: center;align-items: center;margin:auto;">
+                        <p style="color: white;font-weight: bolder;">Tente novamente!</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="termometro_1">
@@ -142,7 +148,6 @@
         let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer')//.on("click", apagarJanelas);
         $(document).find('[id^=comecar]').css('cursor', 'pointer').on("click", comecar);
         let termometro = $(document).find('[id^=termometro]').hide();
-        console.log(termometro);
 
         var submeter = $('#sub').hide();
         var fundo = $('#fundo').hide();
@@ -151,8 +156,27 @@
         let certo = 0;
         let errado = 0;
         let selecionado;
+        let contadorCerto = 0;
         apagarJanelas();
         $(janelas[0]).show();
+
+
+        $(document).find('[id^=btnTenteNovamente]').css('cursor', 'pointer').on("click", reiniciar);
+
+        function reiniciar() {
+            $('#sub').hide();
+            $('#fundo').hide();
+            $('#personagem').hide();
+            contador = 0;
+            certo = 0;
+            errado = 0;
+            selecionado;
+            contadorCerto = 0;
+            apagarJanelas();
+            $(janelas[0]).show();
+            $("#personagem").animate({ top: 330, left: 54 }, 1000);
+            $(document).find('[id^=termometro]').hide();
+        }
 
         function comecar() {
             desmarcarOpcoes();
@@ -166,7 +190,6 @@
 
         function validacao() {
             $(document).find('[id^=opcao]').map((index, opcao) => {
-                console.log(contador);
                 $(opcao).click(() => {
                     desmarcarOpcoes();
                     $(`#marcado_${(index + 1)}`).show();
@@ -196,7 +219,6 @@
             $(janelas[contador + 2]).show();
             contador++;
             if (janelas.length - 2 < contador) {
-                console.log('validando');
                 validacao(contador + 3)
             }
         }
@@ -208,9 +230,16 @@
                 { top: 185, left: 244 },
             ]
             $(document).ready(function () {
+                contadorCerto++;
                 $("#personagem").animate(coordenadas[index], 1000, () => {
                     console.log('finalizou');
                 });
+                console.log(contadorCerto);
+                if (contadorCerto == 3) {
+                    console.log('mostrar o feed certo');
+                    $('#parabens').show();
+                    $('#tenteNovamente').hide();
+                }
             });
         }
 
