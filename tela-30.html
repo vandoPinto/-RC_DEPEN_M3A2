@@ -1,96 +1,141 @@
 <div style="height: 72px; width: 100%; background-color: #004c72; ">
-    <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;" /><img
-        style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;"
-        src="recursos/imgs/SI_H1.png"><img style="height: 73.05px; width:108.45px; margin-left:170.85px;"
-        src="recursos/imgs/SI_H2.png"><img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
-        src="recursos/imgs/SI_H3.png">
+    <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;"><img
+            style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;"
+            src="recursos/imgs/SI_H1.png"><img style="height: 73.05px; width:108.45px; margin-left:170.85px;"
+            src="recursos/imgs/SI_H2.png"><img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
+            src="recursos/imgs/SI_H3.png">
+    </div>
 </div>
-<div class="coluna-esquerda largura-1_1" style="width: 100%; margin-top: 20px;">
-    <p style="text-align: center; margin-bottom: 60px;"><strong style="color: #004c72;">Clique</strong> nas sanfonas
-        para
-        ver os tipos de diagnóstico em situação
-        de tuberculose.</p>
-    <img src="recursos/imgs/SI_30a.png"
-        style="margin-left: 130px; margin-top: -40px; width: 633.95px; height: 65px; cursor: pointer;"
-        class="btn animate__animated animate__backInRight" id="botao_1">
-    <img src="recursos/imgs/SI_30b.png"
-        style="margin-left: 130px; margin-top: 10px; width: 633.95px; height: 65px; cursor: pointer;"
-        class="btn animate__animated animate__backInLeft" id="botao_2">
-    <img src="recursos/imgs/SI_30c.png"
-        style="margin-left: 130px; margin-top: 10px; width: 633.95px; height: 65px; cursor: pointer;"
-        class="btn animate__animated animate__backInRight" id="botao_2">
-    <img src="recursos/imgs/SI_30d.png"
-        style="margin-left: 130px; margin-top: 10px; width: 633.95px; height: 65px; cursor: pointer;"
-        class="btn animate__animated animate__backInLeft" id="botao_2">
+<div class="coluna-esquerda largura-1_1" style="width: 100%;">
+    <div id="janela_0">
+        <div
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <img src="recursos/imgs/SI_31.png" style="margin-left: 40px;width: 300px;">
+            <div
+                style="margin-top: 96px;margin-left: 40px;width: 330px;height: 75px;color: white;font-weight: bold;border: 1px solid #fac900;border-radius: 10px;padding: 20px;">
+                <p style="text-align: center;">
+                    Vamos testar se você se recorda dos tipos de diagnóstico
+                    apresentados? Responda às afirmações selecionando a
+                    alternativa correta para o personagem chegar à unidade de saúde. Não se esqueça de clicar em
+                    começar.
+                </p>
+            </div>
+        </div>
+        <img id="comecar" src="recursos/imgs/SI_31a.png"
+            style="position: absolute;left: 635px;top: 310px;width: 130px;">
+    </div>
     <div>
+        <img id="personagem" src="recursos/imgs/personagem.png"
+            style="position: absolute; left: 54px; top: 330px; width: 60px;">
+        <img id="fundo" src="recursos/imgs/SI_32.png" style="position: absolute; margin-left: 120px; width: 261px;">
+        <img id="sub" src="recursos/imgs/submeter.png"
+            style="position: absolute; left: 605px; top: 338px; width: 130px; cursor: pointer;">
         <div id="janela_1"
-            style="position: relative;width: 563px;height: 180px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;margin-left: 175px;margin-top: -324px;cursor: pointer;">
-            <h1 style="padding: 10px 0px 0px 20px; color: #fac900;">Diagnóstico clínico</h1>
-            <p style="font-weight: normal;padding-left: 20px; color: white;">
-                Baseado na constatação dos sintomas clássicos, observados nas diversas formas de apresentação da TB
-                pulmonar: tosse
-                persistente seca ou produtiva, febre vespertina, sudorese noturna e emagrecimento. A coleta do histórico
-                do paciente e a
-                avaliação física também são realizadas.
-            </p>
-            <p style="font-weight: normal;padding-left: 20px; color: white;">
-                Sintomas como febre, astenia, emagrecimento e tosse ocorrem em 80% dos casos de TB miliar. O
-                exame físico pode mostrar hepatomegalia (35% dos casos), alterações do sistema nervoso central (30% dos
-                casos) e
-                alterações cutâneas do tipo eritemato-máculo-pápulo-vesiculosas (incomum).
-            </p>
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <div
+                style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
+                <p>
+                    Tosse persistente seca ou produtiva, febre vespertina, sudorese noturna e emagrecimento são sintomas
+                    clássicos
+                    observados por esse diagnóstico.
+                </p>
+                <div style="display: flex; flex-direction: column;">
+                    <div id="opcao_1_e" style="display: inline-flex; cursor: pointer;">
+                        <p>( </p>
+                        <p id="marcado_1">X</p>
+                        <p>) </p>
+                        <p style="padding-left: 3px;"> Diagnóstico clínico</p>
+                    </div>
+                    <div id="opcao_1_c" style="display: inline-flex; margin-top: -12px; cursor: pointer;">
+                        <p>(</p>
+                        <p id="marcado_2">X</p>
+                        <p>)</p>
+                        <p style="padding-left: 3px;"> Diagnóstico por imagem</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="janela_2"
-            style="position: relative;width: 578px;height: 120px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;margin-left: 176px;margin-top: -235px;cursor: pointer;">
-            <h1 style="padding: 10px 0px 0px 20px; color: #fac900;">Diagnóstico diferencial Diagnóstico diferencial</h1>
-            <p style="font-weight: normal;padding-left: 20px; color: white;">
-                O diagnóstico diferencial é feito pelo médico baseado no conhecimento clínico aliado a métodos
-                complementares usados no
-                diagnóstico de outras doenças, tais como câncer, pneumonias, doenças autoimunes, etc.
-            </p>
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <div
+                style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
+                <p>
+                    Conhecimento clínico + métodos usados no diagnóstico de outras doenças (câncer, por exemplo) é
+                    estratégia desse tipo de
+                    diagnóstico.
+                </p>
+                <div style="display: flex; flex-direction: column;">
+                    <div id="opcao_2_e" style="display: inline-flex; cursor: pointer;">
+                        <p>( </p>
+                        <p id="marcado_3">X</p>
+                        <p>) </p>
+                        <p style="padding-left: 3px;">Diagnóstico bacteriológico</p>
+                    </div>
+                    <div id="opcao_2_c" style="display: inline-flex; margin-top: -12px; cursor: pointer;">
+                        <p>(</p>
+                        <p id="marcado_4">X</p>
+                        <p>)</p>
+                        <p style="padding-left: 3px;">Diagnóstico diferencial</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="janela_3"
-            style="position: relative;width: 583px;height: 280px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;margin-left: 176px;margin-top: -315px;cursor: pointer;">
-            <h1 style="padding: 10px 0px 0px 20px; color: #fac900;">Diagnóstico bacteriológico</h1>
-            <p style="font-weight: normal;padding-left: 20px;padding-right: 20px;color: white;">
-                <strong>- Baciloscopia direta:</strong> a baciloscopia direta é um exame simples, no qual, com o auxílio
-                de um microscópio e de alguns
-                reagentes específicos, é possível a identificação do M. tuberculosis em amostras biológicas. No caso
-                específico da TB
-                pulmonar, são utilizadas duas amostras de escarro coletadas de indivíduos que apresentem manifestações
-                clínicas ou
-                exames radiológicos sugestivos de TB pulmonar.
-            </p>
-            <p style="font-weight: normal;padding-left: 20px;padding-right: 20px;color: white;">
-                <strong>- Teste Rápido Molecular para Tuberculose (TRM-TB, GeneXpert®):</strong> o teste detecta na
-                amostra a presença de material
-                genético do bacilo e de algumas de suas variantes que sejam resistentes às drogas utilizadas no
-                tratamento. Ele
-                apresenta maior sensibilidade do que a baciloscopia direta para a detecção da TB pulmonar e laríngea em
-                adultos e
-                adolescentes. Somente uma amostra de escarro é utilizada e o seu resultado fica disponível em
-                aproximadamente duas
-                horas.
-            </p>
-            <p style="font-weight: normal;padding-left: 20px;padding-right: 20px;color: white;">
-                </strong>- Cultura de escarro:</strong> refere-se a uma técnica na qual se utilizam meios artificiais
-                que favorecem o crescimento e a
-                reprodução do bacilo em laboratório, o que permite a sua identificação. Nos casos pulmonares com
-                baciloscopia negativa,
-                a cultura do escarro pode aumentar em até 30% o diagnóstico bacteriológico da doença.
-            </p>
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <div
+                style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
+                <p>
+                    Baciloscopia direta, TRM-TB e cultura de escarro são técnicas desse diagnóstico.
+                </p>
+                <div style="display: flex; flex-direction: column;">
+                    <div id="opcao_3_c" style="display: inline-flex; cursor: pointer;">
+                        <p>( </p>
+                        <p id="marcado_5">X</p>
+                        <p>) </p>
+                        <p style="padding-left: 3px;">Diagnóstico bacteriológico</p>
+                    </div>
+                    <div id="opcao_3_e" style="display: inline-flex; margin-top: -12px; cursor: pointer;">
+                        <p>(</p>
+                        <p id="marcado_6">X</p>
+                        <p>)</p>
+                        <p style="padding-left: 3px;">Diagnóstico diferencial</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="janela_4"
-            style="position: relative;width: 591px;height: 130px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;margin-left: 176px;margin-top: -125px;cursor: pointer;">
-            <h1 style="padding: 10px 0px 0px 20px; color: #fac900;">Diagnóstico por imagem</h1>
-            <p style="font-weight: normal;padding-left: 20px;padding-right: 20px;color: white;">
-                Radiografia de tórax: é o método de imagem de escolha para a avaliação inicial e
-                acompanhamento da TB pulmonar, embora seja mais complexo e tenha maior custo. Nela podem
-                ser observados vários padrões radiológicos sugestivos de atividade da doença. Sendo assim, deve
-                Diagnóstico por imagem
-                ser solicitada, sempre que disponível, para todo indivíduo com suspeita de TB e realizada com os exames
-                bacteriológicos.
-            </p>
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <div
+                style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
+                <p id="parabens" style="margin-top: 62px; margin-left: 45px; width: 260px; display: none;">
+                    <strong>Parabéns!</strong> Você acertou as três situações.
+                </p>
+                <div id="tenteNovamente">
+                    <p style="margin-top: 49px;margin-left: 45px;margin-bottom: 27px;width: 260px;">
+                        Tente novamente e acerte as três alternativas para o personagem chegar à unidade de saúde!
+                    </p>
+                    <div id="btnTenteNovamente"
+                        style="background-color:#fac900;width: 112px;height: 30px;border-radius: 5px;display: flex;justify-content: center;align-items: center;margin:auto;">
+                        <p style="color: white;font-weight: bolder;">Tente novamente!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="termometro_1">
+            <img src="recursos/imgs/termometro1.png"
+                style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
+        </div>
+        <div id="termometro_2">
+            <img src="recursos/imgs/termometro2.png"
+                style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
+        </div>
+        <div id="termometro_3">
+            <img src="recursos/imgs/termometro3.png"
+                style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
+        </div>
+        <div id="termometro_4">
+            <img src="recursos/imgs/termometro4.png"
+                style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
         </div>
     </div>
 </div>
@@ -100,11 +145,109 @@
 </footer>
 <script>
     $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer')//.on("click", apagarJanelas);
+        $(document).find('[id^=comecar]').css('cursor', 'pointer').on("click", comecar);
+        let termometro = $(document).find('[id^=termometro]').hide();
+
+        var submeter = $('#sub').hide();
+        var fundo = $('#fundo').hide();
+        var personagem = $('#personagem').hide();
+        let contador = 0;
+        let certo = 0;
+        let errado = 0;
+        let selecionado;
+        let contadorCerto = 0;
         apagarJanelas();
+        $(janelas[0]).show();
+
+
+        $(document).find('[id^=btnTenteNovamente]').css('cursor', 'pointer').on("click", reiniciar);
+
+        function reiniciar() {
+            $('#sub').hide();
+            $('#fundo').hide();
+            $('#personagem').hide();
+            contador = 0;
+            certo = 0;
+            errado = 0;
+            selecionado;
+            contadorCerto = 0;
+            apagarJanelas();
+            $(janelas[0]).show();
+            $("#personagem").animate({ top: 330, left: 54 }, 1000);
+            $(document).find('[id^=termometro]').hide();
+        }
+
+        function comecar() {
+            desmarcarOpcoes();
+            $(janelas[0]).hide();
+            $(fundo).show();
+            $(personagem).show();
+            $(janelas[1]).show();
+            $(termometro[0]).show();
+            validacao();
+        }
+
+        function validacao() {
+            $(document).find('[id^=opcao]').map((index, opcao) => {
+                $(opcao).click(() => {
+                    desmarcarOpcoes();
+                    $(`#marcado_${(index + 1)}`).show();
+                    selecionado = opcao;
+                    $(submeter).fadeIn();
+                })
+            })
+        }
+
+        $(submeter).on("click", () => {
+            console.log(selecionado.id);
+            if (selecionado.id.split('_')[2] == 'c') {
+                animar(certo);
+                certo++;
+            } else {
+                errado++;
+                $(termometro).hide();
+                $(termometro[errado]).show();
+                //$(termometro[errado]).addClass("animate__animated animate__tada");
+            }
+            proximaAtividade();
+        })
+
+        function proximaAtividade() {
+            $(submeter).hide();
+            $(janelas[contador + 1]).hide();
+            $(janelas[contador + 2]).show();
+            contador++;
+            if (janelas.length - 2 < contador) {
+                validacao(contador + 3)
+            }
+        }
+
+        function animar(index) {
+            let coordenadas = [
+                { top: 290, left: 109 },
+                { top: 255, left: 177 },
+                { top: 185, left: 244 },
+            ]
+            $(document).ready(function () {
+                contadorCerto++;
+                $("#personagem").animate(coordenadas[index], 1000, () => {
+                    console.log('finalizou');
+                });
+                console.log(contadorCerto);
+                if (contadorCerto == 3) {
+                    console.log('mostrar o feed certo');
+                    $('#parabens').show();
+                    $('#tenteNovamente').hide();
+                }
+            });
+        }
+
         let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).click(() => {
+            $(botao).css('cursor', 'pointer')
+            $(botao).click((e) => {
                 apagarJanelas();
+                $('#' + e.currentTarget.id).css('background-color', '#fac900');
                 $(janelas[index]).fadeIn();
             })
         })
@@ -112,6 +255,9 @@
             janelas.map((index, janela) => {
                 $(janela).hide();
             })
+        }
+        function desmarcarOpcoes() {
+            $(document).find('[id^=marcado]').hide();
         }
     })
 </script>

@@ -1,18 +1,7 @@
 <style>
-    .submeter {
-        margin: 1em auto;
-        font-weight: bold;
-        color: #ffffff;
-        border-radius: 3px;
-        background-color: #FAC900;
-        border: solid 0 transparent;
-        outline: none;
-        box-shadow: 0 .1em rgba(0, 0, 0, .5);
-        padding: .5em;
-        display: block;
-        width: 50%;
-        cursor: pointer;
-        text-align: center;
+    li {
+        margin-bottom: 12px;
+        margin-left: 18px;
     }
 </style>
 <div style="height: 72px; width: 100%; background-color:  #004c72; ">
@@ -21,35 +10,38 @@
     <img style="height: 73px; margin-left:170.85px;" src="recursos/imgs/SI_H2.png">
     <img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;" src="recursos/imgs/SI_H3.png">
 </div>
-<div class="coluna-esquerda largura-1_3">
-    <img class="animate__animated animate__flipInX"
-        style="height: 219.4px; width: 241.85px; margin-top: 80.65px; margin-left: 35px;" src="recursos/imgs/SI_listras.png">
+<div class="coluna-esquerda largura-1_3 animate__animated animate__flipInX">
+    <img style="height: 219.4px; width: 241.85px; margin-top: 80.65px; margin-left: 35px;"
+        src="recursos/imgs/SI_listras.png">
 </div>
-<div class="coluna-direita largura-2_1" style="width: 500px; height: 500px; margin-top: 80px;margin-right: 75px;">
-    <h1>Rendimento</h1>
-    <p id="texto"></p>
-    <p>Você pode refazer este exercício quantas vezes quiser.</p>
+<div class="coluna-direita largura-2_1 ">
+    <div style="width: 520px;margin-top: 80px;margin-right: 37px;">
+        <h1>Referências Bibliográficas</h1>
+        <ul>
+            <li>AGÊNCIA ESTADUAL DE ADMINISTRAÇÃO DO SISTEMA PENITENCIÁRIO DO MATO GROSSO. Módulo de Saúde da Agepen
+                utiliza alta
+                tecnologia para diagnóstico rápido e eficiente da tuberculose em detentos.<strong> Agepen</strong>, 14 out. 2019.
+                Disponível em:
+                <a href="https://www.agepen.ms.gov.br/modulo-de-saude-da-agepen-utiliza-alta-tecnologia-para-diagnostico-rapido-e-eficiente-da-tuberculose-em-detentos/"
+                    target="_blank"
+                    >https://www.agepen.ms.gov.br/modulo-de-saude-da-agepen-utiliza-alta-tecnologia-para-diagnostico-rapido-e-eficiente-da-tuberculose-em-detentos/</a>
+                . Acesso em: 21 mar. 2021.
+            </li>
+            <li>BERTAZONE, E. C.; GIR, E.; HAYASHIDA, M. Situações vivenciadas pelos trabalhadores de enfermagem na
+                assistência ao
+                portador de tuberculose pulmonar.<strong> Rev. Latino-Am. Enfermagem</strong>, Ribeirão Preto, v. 13, n. 3, pp. 374-381,
+                jun. 2005.
+                Disponível em:
+                <a href="http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0104-11692005000300012&lng=en&nrm=iso"
+                    target="_blank"
+                    >http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0104-11692005000300012&lng=en&nrm=iso</a>
+                . Acesso
+                em: 21 mar. 2021.
+            </li>
+        </ul>
+    </div>
 </div>
 <footer style="height: 39.05px; width: 100%; background-color: #004c72;">
     <img style="height: 29px;margin: 6.5px 37.05px;" src="recursos/imgs/SI_F1.png">
     <img style="height: 27px;margin: 8.5px 37.05px;position: absolute;right: 0px;" src="recursos/imgs/SI_F2.png">
 </footer>
-<script>
-    $(() => {
-        let resposta = '';
-        var conteudo = $("#texto").html();
-        let submeter = $(document).find('[class=submeter]').on('click', () => {
-            console.log('tentando');
-            window.location("#tela-54")
-        });
-        console.log(qtdQuestoes);
-        console.log(pontos);
-        if (pontos == qtdQuestoes) {
-            console.log("certo");
-            $("#texto").html("<p>De um total de " + qtdQuestoes + " questões, você acertou " + pontos + ".</p>")
-        } else {
-            console.log("errado");
-            $("#texto").html("<p>De um total de " + qtdQuestoes + " questões, você acertou " + pontos + ".</p><p style='color: red;'>Estude um pouco mais o conteúdo do curso e refaça a avaliação quando se sentir preparado(a).</p>")
-        }
-    })
-</script>

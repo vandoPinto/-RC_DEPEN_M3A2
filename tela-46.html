@@ -1,8 +1,3 @@
-<style>
-    li {
-        list-style-type: none;
-    }
-</style>
 <div style="height: 72px; width: 100%; background-color: #004c72; ">
     <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;" /><img
         style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;"
@@ -10,97 +5,111 @@
         src="recursos/imgs/SI_H2.png"><img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
         src="recursos/imgs/SI_H3.png">
 </div>
-<div class="coluna-esquerda largura-1_1" style="width: 100%; margin-top: 30px;">
-    <p style=" margin-left: 110px; width: 670px;">Você deve agora estar se perguntando se é possível estabelecer
-        outras
-        ações que possibilitem o enfrentamento da
-        TB no
-        sistema prisional, dadas as dificuldades vivenciadas, incluindo a escassez de recursos.</p>
-    <p style="text-align: center;"><strong style="color: #004c72;">Clique</strong> em cada uma das imagens e veja algumas possibilidades.
-    </p>
-    <div
-        style="display: flex;margin-top: 30px;margin-left: 150px;width: 590px;flex-direction: row;flex-wrap: nowrap;justify-content: space-between;">
-        <img src="recursos/imgs/SI_50a.png" style="margin-top: -10px;width: 130px;cursor: pointer;"
-            class="btn animate__animated animate__backInLeft" id="botao_1">
-        <img src="recursos/imgs/SI_50b.png" style="margin-top: -10px;width: 130px;cursor: pointer;"
-            class="btn animate__animated animate__backInLeft" id="botao_2">
-        <img src="recursos/imgs/SI_50c.png" style="margin-top: -10px;width: 130px;cursor: pointer;"
-            class="btn animate__animated animate__backInRight" id="botao_2">
-        <img src="recursos/imgs/SI_50d.png" style="margin-top: -10px;width: 130px;cursor: pointer;"
-            class="btn animate__animated animate__backInRight" id="botao_2">
+<div class="coluna-esquerda largura-1_1" style="margin-top: 20px;width: 100%;">
+    <p style="color: #004c72; font-weight: bold; text-align: center; width: 590px; margin-left: 200px;">Clique sobre cada peça ao lado, individualmente, e arraste uma a uma para formar o quebra-cabeça e, assim, entender mais
+    sobre o isolamento de pessoas com tuberculose no sistema prisional.</p>
+    <div>
+        <div id="drop_1" style="position: absolute; top: 144px; left: 20px; opacity: .5;">
+            <img src="recursos/imgs/peca1.png" style="width: 184px;height: 140px;">
+        </div>
+        <div id="drop_2" style="position: absolute;top: 144px;left: 158px;opacity: .5;">
+            <img src="recursos/imgs/peca2.png" style="width: 188px;height: 140px;">
+        </div>
+        <div id="drop_3" style="position: absolute;top: 145px;left: 300px;opacity: .5;">
+            <img src="recursos/imgs/peca3.png" style="width: 144px;height: 183px;">
+        </div>
+        <div id="drop_4" style="position: absolute;top: 240px;left: 20px;opacity: .5;">
+            <img src="recursos/imgs/peca4.png" style="width: 186px;height: 184px;">
+        </div>
+        <div id="drop_5" style="position: absolute;top: 239px;left: 159px;opacity: .5;">
+            <img src="recursos/imgs/peca5.png" style="width: 186px;height: 186px;">
+        </div>
+        <div id="drop_6" style="position: absolute;top: 283px;left: 299px;opacity: .5;">
+            <img src="recursos/imgs/peca6.png" style="width: 145px;height: 142px;">
+        </div>
+    </div>
+    <div>
+        <div id="drag_1" style="position: absolute; left: 480px; top: 150px;">
+            <img src="recursos/imgs/peca1.png" style="width: 184px;height: 140px;">
+        </div>
+        <div id="drag_2" draggable="true" style="position: absolute; left: 480px; top: 270px;">
+            <img src="recursos/imgs/peca2.png" style="width: 188px;height: 140px;">
+        </div>
+        <div id="drag_3" draggable="true" style="position: absolute; left: 670px; top: 150px;">
+            <img src="recursos/imgs/peca3.png" style="width: 144px;height: 183px;">
+        </div>
+        <div id="drag_4" draggable="true" style="position: absolute;left: 670px;top: 230px;">
+            <img src="recursos/imgs/peca4.png" style="width: 186px;height: 184px;">
+        </div>
+        <div id="drag_5" draggable="true" style="position: absolute;left: 570px;top: 150px;">
+            <img src="recursos/imgs/peca5.png" style="width: 186px;height: 186px;">
+        </div>
+        <div id="drag_6" draggable="true" style="position: absolute;left: 600px;top: 270px;">
+            <img src="recursos/imgs/peca6.png" style="width: 145px;height: 142px;">
+        </div>
     </div>
     <div>
         <div id="janela_1"
-            style="position: relative; width: 352px; height: 160px; background-color: rgba(0, 77, 115, 0.9); border-radius: 10px; flex-wrap: nowrap; margin-left: 105px; margin-top: -249px; cursor: pointer; display: none;">
-            <p style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;">
-                <strong style="color: #ffc900;"> 1. Melhoria da comunicação entre os
-                    serviços de saúde das unidades prisionais:</strong><br> as transferências frequentes de presos é
-                uma realidade e elas aumentam a chance de interrupção do tratamento. Ao se implementar um de
-                sistema de
-                informação e
-                comunicação ágil entre os serviços de saúde das diversas unidades prisionais se evitaria a
-                interrupção
-                do tratamento.
+            style="position: absolute;width: 352px;height: 160px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;left: 174px;top: 120px;cursor: pointer;">
+            <p
+                style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;text-align: center;">
+                O isolamento da pessoa privada de liberdade diagnosticada com TB durante o encarceramento não é
+                necessário,
+                já
+                que não
+                traz benefício.
             </p>
         </div>
-
         <div id="janela_2"
-            style="position: relative;width: 351px;height: 190px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;margin-left: 195px;margin-top: -224px;cursor: pointer;display: none;">
-            <p style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;">
-                <strong style="color: #ffc900;">2. Transferência de indivíduos em TDO para unidades prisionais com ações
-                    de controle da TB
-                    implantadas:</strong><br> todo paciente em
-                tratamento supervisionado precisa ser transferido para unidades prisionais com as ações de
-                controle da
-                TB implantadas.
-                Dessa forma, garantem-se a continuidade do tratamento, a possibilidade de cura e o controle da
-                doença.
-                Conforme
-                preconizado pela legislação, o prontuário de saúde deve sempre acompanhar o paciente por ocasião
-                das
-                transferências
-                entre as unidades prisionais.
+            style="position: absolute;width: 352px;height: 160px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;left: 174px;top: 120px;cursor: pointer;">
+            <p
+                style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;text-align: center;">
+                O isolamento contribui para a estigmatização e tende a desestimular a busca pelo diagnóstico por parte
+                de
+                outras pessoas
+                privadas de liberdade pelo temor à discriminação e à limitação de circulação imposta.
             </p>
         </div>
         <div id="janela_3"
-            style="position: relative; width: 372px; height: 210px; background-color: rgba(0, 77, 115, 0.9); border-radius: 10px; flex-wrap: nowrap; margin-left: 345px; margin-top: -214px; cursor: pointer; display: none;">
-            <p style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;">
-                <strong style="color: #ffc900;">3. Garantia da continuidade de tratamento extramuro:</strong><br> a
-                pessoa
-                que vai dar continuidade ao tratamento fora da unidade prisional precisa saber que é
-                possível o
-                acesso ao
-                tratamento em qualquer unidade de saúde e que, se necessário, os familiares podem ajudá-lo nesse
-                acesso
-                à unidade.
-                Idealmente, o paciente deve ter em seu poder um documento de encaminhamento para dar
-                continuidade em
-                unidade de saúde em
-                caso de livramento, informando a data de início e o esquema de tratamento. A unidade prisional
-                deverá
-                comunicar a
-                transferência do paciente vigilância epidemiológica do município.
+            style="position: absolute;width: 352px;height: 160px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;left: 174px;top: 120px;cursor: pointer;">
+            <p
+                style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;text-align: center;">
+                Veja que o isolamento também não se justifica, pois, nas semanas anteriores ao diagnóstico, as pessoas
+                em
+                contato com
+                indivíduos infectados já foram largamente expostas ao bacilo.
             </p>
         </div>
         <div id="janela_4"
-            style="position: relative;width: 349px;height: 230px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;margin-left: 495px;margin-top: -244px;cursor: pointer;">
-            <p style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;">
-                <strong style="color: #ffc900;">4. Atividades de educação em saúde:</strong><br> realizar atividades de
-                educação e sensibilização possui papel essencial no cenário prisional, e
-                elas
-                devem estar
-                integradas ao dia a dia do serviço de saúde: nas consultas, no acompanhamento do tratamento,
-                exame de
-                ingressos e
-                durante as campanhas de busca ativa. Nesses momentos, os profissionais da saúde devem fornecer
-                informações, ouvir as
-                dúvidas das pessoas privadas de liberdade, servidores e toda a comunidade prisional para buscar
-                com elas
-                caminhos para
-                solucionar suas dificuldades. Dada a importância da coinfecção TB/HIV, esse tema deve ser
-                contemplado
-                nas ações
-                educativas.
+            style="position: absolute;width: 352px;height: 160px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;left: 174px;top: 120px;cursor: pointer;">
+            <p
+                style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;text-align: center;">
+                Além disso, lembre-se de que algumas semanas após o início do tratamento o risco de transmissão se reduz
+                consideravelmente.
+            </p>
+        </div>
+        <div id="janela_5"
+            style="position: absolute;width: 352px;height: 160px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;left: 174px;top: 120px;cursor: pointer;">
+            <p
+                style="font-weight: normal;padding-top: 40px;padding-left: 20px;color: white;padding-right: 20px;text-align: center;">
+                O isolamento de PPL com TB só é recomendado para casos identificados no momento do ingresso na prisão,
+                pelo
+                período de
+                15 dias, casos confirmados ou suspeitos de resistência, falência de tratamento.
+            </p>
+        </div>
+        <div id="janela_6"
+            style="position: absolute;width: 352px;height: 160px;background-color: rgba(0, 77, 115, 0.9);border-radius: 10px;flex-wrap: nowrap;left: 174px;top: 120px;cursor: pointer;">
+            <p
+                style="font-weight: normal;padding-top: 20px;padding-left: 20px;color: white;padding-right: 20px;text-align: center;">
+                Mediante confirmação de um caso de tuberculose, a unidade que identifica o caso é responsável por sua
+                notificação no
+                Sistema de Informação de Agravos de Notificação (Sinan), visto que a TB é uma doença de notificação
+                compulsória. Esta é
+                feita por meio do preenchimento da “Ficha de Notificação/Investigação de Tuberculose”, mencionando a
+                origem
+                prisional do
+                caso.
             </p>
         </div>
     </div>
@@ -109,20 +118,66 @@
     <img style="height: 29px;margin: 6.5px 37.05px;" src="recursos/imgs/SI_F1.png">
     <img style="height: 27px;margin: 8.5px 37.05px;position: absolute;right: 0px;" src="recursos/imgs/SI_F2.png">
 </footer>
+
 <script>
     $(() => {
+        const empties = $(document).find('[id^=drop]');
+        let drag;
+        let positions = [];
         let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
         apagarJanelas();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
-        })
+
         function apagarJanelas() {
             janelas.map((index, janela) => {
                 $(janela).hide();
             })
+        }
+
+        const dragStart = function () {
+            this.className += " hold";
+            drag = this;
+            setTimeout(() => (this.className = "invisible"), 0);
+            apagarJanelas();
+        };
+
+        const dragOver = function (e) {
+            e.preventDefault();
+        };
+
+        const dragEnter = function (e) {
+            e.preventDefault();
+            this.className += " hovered";
+        };
+
+        const dragLeave = function () {
+            this.className = "empty";
+        };
+
+        const dragEnd = function () {
+            this.className = "drag";
+        };
+
+        const dragDrop = function () {
+            this.className = "empty";
+            if (this.id.indexOf('drop') == 0) {
+                $("#" + drag.id).animate({ top: $(this)[0].offsetTop, left: $(this)[0].offsetLeft }, 1);
+                if (drag.id.split('_')[1] == this.id.split('_')[1]) {
+                    $(janelas[(this.id.split('_')[1] - 1)]).fadeIn();
+                }
+            }
+        };
+
+        $(document).find('[id^=drag]').map((index, objeto) => {
+            objeto.addEventListener("dragstart", dragStart);
+            objeto.addEventListener("dragend", dragEnd);
+            positions[index] = { top: objeto.offsetTop, left: objeto.offsetLeft }
+        })
+
+        for (const empty of empties) {
+            empty.addEventListener("dragover", dragOver);
+            empty.addEventListener("dragenter", dragEnter);
+            empty.addEventListener("dragleave", dragLeave);
+            empty.addEventListener("drop", dragDrop);
         }
     })
 </script>
